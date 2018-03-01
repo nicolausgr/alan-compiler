@@ -1,0 +1,4 @@
+1: unit, hello, −, −
+2: par, "Hello world!\n", R, −
+3: call, −, −, writeString
+4: endu, hello, −, −

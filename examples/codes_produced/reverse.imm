@@ -1,0 +1,24 @@
+1: unit, reverse, −, −
+2: par, s, R, −
+3: par, $1, RET, −
+4: call, −, −, strlen
+5: :=, $1, −, l
+6: :=, 0, −, i
+7: <, i, l, 9
+8: jump, −, −, 17
+9: array, r, i, $2
+10: −, l, i, $3
+11: −, $3, 1, $4
+12: array, s, $4, $5
+13: :=, [$5], −, [$2]
+14: +, i, 1, i
+16: jump, −, −, 7
+17: array, r, i, $7
+18: :=, '\0', −, [$7]
+19: endu, reverse, −, −
+20: unit, main, −, −
+21: par, "\n!dlrow olleH", R, −
+22: call, −, −, reverse
+23: par, r, R, −
+24: call, −, −, writeString
+25: endu, main, −, −

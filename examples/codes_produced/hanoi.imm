@@ -1,0 +1,43 @@
+1: unit, move, −, −
+2: par, "Moving from ", R, −
+3: call, −, −, writeString
+4: par, source, R, −
+5: call, −, −, writeString
+6: par, " to ", R, −
+7: call, −, −, writeString
+8: par, target, R, −
+9: call, −, −, writeString
+10: par, ".\n", R, −
+11: call, −, −, writeString
+12: endu, move, −, −
+13: unit, hanoi, −, −
+14: >=, rings, 1, 16
+15: jump, −, −, 31
+16: −, rings, 1, $1
+17: par, $1, V, −
+18: par, source, R, −
+19: par, auxiliary, R, −
+20: par, target, R, −
+21: call, −, −, hanoi
+22: par, source, R, −
+23: par, target, R, −
+24: call, −, −, move
+25: −, rings, 1, $2
+26: par, $2, V, −
+27: par, auxiliary, R, −
+28: par, target, R, −
+29: par, source, R, −
+30: call, −, −, hanoi
+31: endu, hanoi, −, −
+32: unit, solve, −, −
+33: par, "Rings: ", R, −
+34: call, −, −, writeString
+35: par, $3, RET, −
+36: call, −, −, readInteger
+37: :=, $3, −, NumberOfRings
+38: par, NumberOfRings, V, −
+39: par, "left", R, −
+40: par, "right", R, −
+41: par, "middle", R, −
+42: call, −, −, hanoi
+43: endu, solve, −, −
