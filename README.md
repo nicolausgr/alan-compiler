@@ -1,4 +1,4 @@
 # alanc
 
-Compiler of educational programming language Alan
+Compiler for the educational programming language Alan
 
